@@ -1358,6 +1358,9 @@ $card-color:                        null !default;
 $card-bg:                           var(--#{$prefix}body-bg) !default;
 $card-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
+// Definizione della variabile per padding immagine card 
+$card-img-overlay-padding: 1rem; 
+
 // scss-docs-end card-variables
 
 // Accordion
