@@ -32,16 +32,12 @@ $btn-padding-x: 2.5rem;   // padding orizzontale
 $grid-gutter-width: 0.5rem;  // Imposta lo spazio tra le colonne a 0.5rem
 
 // Personalizza le card
-$card-bg: #343a40;           // background-color scuro (dark)
-$card-color: #17a2b8;        // colore del testo (info)
-$card-border-radius: 2rem;   // border-radius di 2rem
-
 $card-styles: map-merge(
   $card-styles, // mappa di stile originale di Bootstrap
   (
-    bg: $card-bg,
-    color: $card-color,
-    border-radius: $card-border-radius
+    bg: #343a40,           // background-color scuro (dark)
+    color: #17a2b8,        // colore del testo (info)
+    border-radius: 2rem    // border-radius di 2rem
   )
 );
 
@@ -49,21 +45,31 @@ $card-styles: map-merge(
 $colors: map-merge(
   $colors,
   (
-    epicode-1: #5726c3,
-    epicode-2: #8625a5,
-    epicode-3: #cb2376
+    'epicode-1': #5726c3,
+    'epicode-2': #8625a5,
+    'epicode-3': #cb2376
   )
 );
 
 // Personalizza colori specifici (danger, info, light)
-$danger: #ff0077;
-$info: #00ffea;
-$light: #f3eeff;
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'danger': #ff0077,
+    'info': #00ffea,
+    'light': #ddc2e1
+  )
+);
 
 // Personalizza il border-radius di default per badge, input, e bottoni
-$badge-border-radius: 999rem;    
-$input-border-radius: 999rem;    
-$btn-border-radius: 999rem;      
+$border-radius: map-merge(
+  $border-radius,
+  (
+    'badge': 999rem,    
+    'input': 999rem,    
+    'btn': 999rem
+  )
+);
 
 // Classe personalizzata per un bordo azzurro largo 10px
 .border-10-azure {
